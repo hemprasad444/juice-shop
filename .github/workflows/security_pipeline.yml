@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master  # Change to your default branch
-  
+
 jobs:
   bandit:
     runs-on: ubuntu-latest
@@ -29,7 +29,7 @@ jobs:
         cat bandit_report.json  # Display the report in logs
 
     - name: Upload Bandit Report
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: bandit-report
         path: bandit_report.json
